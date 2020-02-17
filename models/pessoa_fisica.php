@@ -6,9 +6,7 @@ class PessoaFisica{
     private $endereco;
     private $telefone;
 
-    public function getNome() {
-        return $nome;
-    }
+
     
 
 }

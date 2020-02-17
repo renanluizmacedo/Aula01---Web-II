@@ -1,3 +1,15 @@
+<?php
+
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+
+    include_once ("obterDadosPost.php");
+
+    if( !empty($_POST) ) {
+        obterDados($_POST);
+    }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,23 +26,23 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-8 jumbotron">
-            <form action="/pagina-processa-dados-do-form" method="post">
+            <form action="CadastrarPessoa.php" method="post">
                 <h3>Cadastrar Pessoa Física</h3>
                 <div class = "form-group">
                     <label for="nome">Nome:</label>
-                    <input class = "form-control" type="text" name = "Nome"/>
+                    <input class = "form-control" type="text" name = "nome"/>
                 </div>
                 <div class = "form-group">
                     <label for="cpf">CPF:</label>
-                    <input class = "form-control" type="text" name = "CPF" />
+                    <input class = "form-control" type="text" name = "cpf" />
                 </div>
                 <div class = "form-group">
-                    <label for="ende">Endereço:</label>
-                    <input class = "form-control" type="text" name = "Endereço" />
+                    <label for="endereco">Endereço:</label>
+                    <input class = "form-control" type="text" name = "endereco" />
                 </div>
                 <div class = "form-group">
-                    <label for="tel">Telefone:</label>
-                    <input class = "form-control" type="text" name = "Telefone" />
+                    <label for="telefone">Telefone:</label>
+                    <input class = "form-control" type="text" name = "telefone" />
                 </div>
 
                 <div class = "row mt-5">
