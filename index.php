@@ -1,18 +1,7 @@
 <?php 
-    $listaPessoas = [
-        [
-            "nome" => "Felipe",
-            "cpf"  => "000.000.000-00",
-            "endereco" => "Endereço",
-            "telefone" => "(41) 0000-0000"
-        ], 
-        [
-            "nome" => "Renan",
-            "cpf"  => "000.000.000-00",
-            "endereco" => "Endereço",
-            "telefone" => "(41) 0000-0000"
-        ]
-    ];
+
+
+    include_once ('PessoaController.php');
 
 
 ?>
@@ -20,7 +9,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Visualizar Pessoas</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,17 +34,12 @@
                             <th>NOME</th>
                             <th>ENDEREÇO</th>
                             <th>TELEFONE</th>
+                            <th></th>
+
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($listaPessoas as $pessoa): ?>
-                        <tr>
-                            <td>000.000.000-00</td>
-                            <td><?= $pessoa['nome'] ?></td>
-                            <td>Endereço</td>
-                            <td>(41) 00000-0000</td>
-                        </tr>
-                        <?php endforeach; ?>
+                        <?php leitura(); ?>
                     </tbody>
                 </table>
             </div>

@@ -7,6 +7,5 @@ class PessoaFisica{
     public $telefone;
 
 
-
 }
 ?>

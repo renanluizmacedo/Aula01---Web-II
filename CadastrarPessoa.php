@@ -13,7 +13,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>CadastrarPessoa</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,7 +47,7 @@
 
                 <div class = "row mt-5">
                   <div class = "col-lg-3">
-                     <button class = "btn btn-warning btn-block mb-2">Voltar</button>
+                     <a href = "index.php" class = "btn btn-warning btn-block mb-2">Voltar</a>
                  </div>
                  <div class = "offset-lg-6 col-lg-3"  >
                      <button class = "btn btn-success btn-block ">Salvar</button>

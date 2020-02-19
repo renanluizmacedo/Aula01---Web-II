@@ -10,9 +10,9 @@
 		$pessoa->endereco = $post['endereco'];
 		$pessoa->telefone = $post['telefone'];
 
-		$controllerPessoa = new PessoaController();
 
-		$controllerPessoa->gravar($pessoa);
+		gravar($pessoa);
+		
 	}
 	
 ?>
