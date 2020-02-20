@@ -5,11 +5,13 @@
 
     include_once ("PessoaController.php");
 
-
     if( !empty($_GET) ) {
-        $pc = new PessoaController;
-        $pc->alterar($_GET);
+        $pc = exibirFormularioAlteracao($_GET);
+    } else if( !empty($_POST)) {
+        $pc = gravarAlteracao($_POST);
     }
+
+    function exibirFormAlteracao($dados) {
 ?>
 
 <!doctype html>
@@ -32,19 +34,20 @@
                 <h3>Alterar Pessoa </h3>
                 <div class = "form-group">
                     <label for="nome">Nome:</label>
-                    <input class = "form-control" type="text" name = "nome"/>
+                    <input class = "form-control" type="text" value="<?php echo $dados[1] ?>" name = "nome"/>
                 </div>
                 <div class = "form-group">
                     <label for="cpf">CPF:</label>
-                    <input class = "form-control" type="text" name = "cpf" />
+                    <input class = "form-control" type="text" 
+                        value="<?php echo $dados[0]; ?>" name = "cpf" />
                 </div>
                 <div class = "form-group">
                     <label for="endereco">Endereço:</label>
-                    <input class = "form-control" type="text" name = "endereco" />
+                    <input class = "form-control" type="text" value="<?php echo $dados[2] ?>" name = "endereco" />
                 </div>
                 <div class = "form-group">
                     <label for="telefone">Telefone:</label>
-                    <input class = "form-control" type="text" name = "telefone" />
+                    <input class = "form-control" type="text" value="<?php echo $dados[3] ?>" name = "telefone" />
                 </div>
 
                 <div class = "row mt-5">
@@ -68,3 +71,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
+    <?php } ?>
