@@ -32,14 +32,14 @@
                             echo "<td>".$dados[3]."</td>";
 
                             echo "<td>";
-                            echo "<button type='submit' name='acao' value='alterar/"."'>";
+                            echo "<a  href = \"AlterarCadastro.php?cpf={$dados[0]}\">";
                                 echo "<img src='../img/edit.svg'> ";
-                            echo "</button>";
+                            echo "</a>";
                             echo "&nbsp";
                             echo "<button type='submit' name='acao' value='remover/"."'>";
                                 echo "<img src='../img/delete.svg'>";
                             echo "</button>";
-                        echo "</td>";      
+                            echo "</td>";      
                         echo "</tr>";
 
                 }
@@ -47,6 +47,15 @@
     
                 fclose($fp);
             }
+        }
+        function alterar($dados){
+            echo $_GET['dados'];
+
+
+          //  $cpf = 
+        }
+        function remover(){
+
         }
 
 ?>
